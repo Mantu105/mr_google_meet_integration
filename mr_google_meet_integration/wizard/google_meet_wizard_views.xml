@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_google_meet_wizard_form" model="ir.ui.view">
+        <field name="name">google.meet.wizard.form</field>
+        <field name="model">google.meet.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Create Google Meet">
+                <field name="event_id" invisible="1"/>
+                <div class="oe_title">
+                    <h1>
+                        <field name="summary" placeholder="Meeting title..."/>
+                    </h1>
+                </div>
+                <group>
+                    <group string="Meeting Details" name="details">
+                        <field name="start_time"/>
+                        <field name="end_time"/>
+                    </group>
+                    <group string="Settings" name="settings">
+                        <field name="send_email"/>
+                        <field name="reminder"/>
+                    </group>
+                </group>
+                <group string="Credentials" name="credentials">
+                    <field name="credential_source" widget="radio"
+                           options="{'horizontal': true}"/>
+                    <field name="credential_info"/>
+                </group>
+                <footer>
+                    <button name="action_create_meet" type="object"
+                            string="Create Google Meet!" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

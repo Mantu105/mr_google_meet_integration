@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+<!-- ======================================================
+     HEADER BANNER
+     ====================================================== -->
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced" style="padding: 40px 0;">
+        <div class="oe_span12" style="text-align:center;">
+            <h1 style="font-size:36px; font-weight:700; color:#1a73e8; margin-bottom:10px;">
+                Google Meet Integration
+            </h1>
+            <h3 style="font-size:18px; font-weight:400; color:#444; margin-bottom:20px;">
+                Create, join &amp; manage Google Meet video meetings directly from Odoo Calendar
+            </h3>
+            <p style="font-size:15px; color:#666; max-width:700px; margin:0 auto;">
+                Connect your Google account (personal or company-level), generate Google Meet
+                links with one click, and automatically notify attendees — all without leaving Odoo.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ======================================================
+     KEY FEATURES
+     ====================================================== -->
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color:#1a73e8; font-size:26px; text-align:center; margin:30px 0 20px;">
+            Key Features
+        </h2>
+
+        <div class="oe_span6">
+            <div style="padding:20px; border:1px solid #e0e0e0; border-radius:8px; margin-bottom:20px;">
+                <h4 style="color:#1a73e8;"><i class="fa fa-video-camera"/> One-Click Meeting Creation</h4>
+                <p>Create a Google Meet link from any Odoo Calendar event using the
+                   <strong>Create Google Meet</strong> button. A wizard lets you set the meeting title,
+                   reminders, and email notification preference.</p>
+            </div>
+        </div>
+
+        <div class="oe_span6">
+            <div style="padding:20px; border:1px solid #e0e0e0; border-radius:8px; margin-bottom:20px;">
+                <h4 style="color:#1a73e8;"><i class="fa fa-users"/> Dual-Level OAuth2 Credentials</h4>
+                <p>Connect at the <strong>company level</strong> (shared by all users) or at the
+                   <strong>user level</strong> (personal account). Personal credentials always take
+                   priority. Restrict company credentials to specific users via the Allowed Users list.</p>
+            </div>
+        </div>
+
+        <div class="oe_span6">
+            <div style="padding:20px; border:1px solid #e0e0e0; border-radius:8px; margin-bottom:20px;">
+                <h4 style="color:#1a73e8;"><i class="fa fa-envelope"/> Automatic Email Invitations</h4>
+                <p>Google Calendar API sends a native invitation email (with RSVP Yes/No/Maybe buttons
+                   and a <strong>Join with Google Meet</strong> link) to all attendees automatically.</p>
+            </div>
+        </div>
+
+        <div class="oe_span6">
+            <div style="padding:20px; border:1px solid #e0e0e0; border-radius:8px; margin-bottom:20px;">
+                <h4 style="color:#1a73e8;"><i class="fa fa-comments"/> Google-Style Chatter Card</h4>
+                <p>A formatted invitation card is posted in the chatter showing the meeting title,
+                   date/time, a <strong>Join with Google Meet</strong> button, meeting link,
+                   and the attendees list.</p>
+            </div>
+        </div>
+
+        <div class="oe_span6">
+            <div style="padding:20px; border:1px solid #e0e0e0; border-radius:8px; margin-bottom:20px;">
+                <h4 style="color:#1a73e8;"><i class="fa fa-trash"/> Delete &amp; Notify</h4>
+                <p>Delete the Google Meet meeting via the <strong>Delete Meet</strong> button.
+                   A confirmation prompt appears, the meeting is removed from Google Calendar,
+                   attendees are notified, and the chatter is updated — all in one action.</p>
+            </div>
+        </div>
+
+        <div class="oe_span6">
+            <div style="padding:20px; border:1px solid #e0e0e0; border-radius:8px; margin-bottom:20px;">
+                <h4 style="color:#1a73e8;"><i class="fa fa-lock"/> Allowed Users Control</h4>
+                <p>At the company level, define exactly which users are permitted to create meetings
+                   using the company Google account. Leave the list empty to allow all users — or
+                   restrict it to specific team members.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======================================================
+     SCREENSHOT — Calendar Event (Create Google Meet button)
+     ====================================================== -->
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced" style="padding:30px 0;">
+        <h2 class="oe_slogan" style="color:#1a73e8; font-size:22px; text-align:center; margin:0 0 20px;">
+            Create Google Meet from Calendar Event
+        </h2>
+        <div class="oe_span12" style="text-align:center;">
+            <img src="screen_01_calendar_event.png"
+                 style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.15);"
+                 alt="Calendar Event with Create Google Meet button"/>
+            <p style="color:#666; font-size:13px; margin-top:10px;">
+                Click <strong>Create Google Meet</strong> on any calendar event to open the meeting wizard.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ======================================================
+     SCREENSHOT — Wizard
+     ====================================================== -->
+<section class="oe_container">
+    <div class="oe_row oe_spaced" style="padding:30px 0;">
+        <h2 class="oe_slogan" style="color:#1a73e8; font-size:22px; text-align:center; margin:0 0 20px;">
+            Meeting Settings Wizard
+        </h2>
+        <div class="oe_span12" style="text-align:center;">
+            <img src="screen_02_wizard.png"
+                 style="max-width:80%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.15);"
+                 alt="Create Google Meet Wizard"/>
+            <p style="color:#666; font-size:13px; margin-top:10px;">
+                Set the meeting title, reminder, credential source, and whether to email attendees.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ======================================================
+     SCREENSHOT — Meet Created (Join + Delete buttons)
+     ====================================================== -->
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced" style="padding:30px 0;">
+        <h2 class="oe_slogan" style="color:#1a73e8; font-size:22px; text-align:center; margin:0 0 20px;">
+            Google Meet Created — Join or Delete
+        </h2>
+        <div class="oe_span12" style="text-align:center;">
+            <img src="screen_03_meet_created.png"
+                 style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.15);"
+                 alt="Calendar Event after Google Meet created"/>
+            <p style="color:#666; font-size:13px; margin-top:10px;">
+                After creation the Meet URL is saved on the event. Use <strong>Join Meet</strong> or
+                <strong>Delete Meet</strong> directly from the form.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ======================================================
+     SCREENSHOT — Chatter Invitation Card
+     ====================================================== -->
+<section class="oe_container">
+    <div class="oe_row oe_spaced" style="padding:30px 0;">
+        <h2 class="oe_slogan" style="color:#1a73e8; font-size:22px; text-align:center; margin:0 0 20px;">
+            Google-Style Invitation in Chatter
+        </h2>
+        <div class="oe_span12" style="text-align:center;">
+            <img src="screen_04_chatter_invitation.png"
+                 style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.15);"
+                 alt="Chatter showing Google-style invitation card"/>
+            <p style="color:#666; font-size:13px; margin-top:10px;">
+                The chatter posts a formatted card with the title, time, <strong>Join with Google Meet</strong>
+                button, meeting link, and attendees list.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ======================================================
+     SCREENSHOT — Gmail Native Invitation
+     ====================================================== -->
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced" style="padding:30px 0;">
+        <h2 class="oe_slogan" style="color:#1a73e8; font-size:22px; text-align:center; margin:0 0 20px;">
+            Native Google Calendar Invitation Email
+        </h2>
+        <div class="oe_span12" style="text-align:center;">
+            <img src="screen_05_gmail_invitation.png"
+                 style="max-width:80%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.15);"
+                 alt="Gmail native Google Calendar invitation email"/>
+            <p style="color:#666; font-size:13px; margin-top:10px;">
+                Attendees receive a native Google Calendar invitation with RSVP buttons and a
+                <strong>Join with Google Meet</strong> link — sent directly by Google.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ======================================================
+     HOW IT WORKS
+     ====================================================== -->
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color:#1a73e8; font-size:26px; text-align:center; margin:30px 0 20px;">
+            How It Works
+        </h2>
+        <div class="oe_span12">
+            <ol style="font-size:15px; line-height:2.2; max-width:750px; margin:0 auto;">
+                <li><strong>Connect Google Account</strong> — Go to Settings → Google Meet or your
+                    User Preferences → Google Meet Configuration → authorize with your Google account.</li>
+                <li><strong>Open a Calendar Event</strong> — Create or open any event in the Odoo Calendar.</li>
+                <li><strong>Click "Create Google Meet"</strong> — A wizard opens to set the meeting
+                    title, reminder, and whether to send email invitations.</li>
+                <li><strong>Meet link is saved</strong> — The Google Meet URL appears on the event,
+                    and the Videocall URL field is populated for native Odoo video call support.</li>
+                <li><strong>Invitations sent</strong> — Google Calendar sends native invitation emails
+                    to all attendees. The chatter shows a formatted invitation card.</li>
+                <li><strong>Join anytime</strong> — Use the <strong>Join Meet</strong> button on the
+                    event to open the meeting in a new tab.</li>
+                <li><strong>Delete when done</strong> — Click <strong>Delete Meet</strong> to remove the
+                    meeting from Google Calendar and notify attendees.</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<!-- ======================================================
+     CONFIGURATION
+     ====================================================== -->
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color:#1a73e8; font-size:26px; text-align:center; margin:30px 0 20px;">
+            Configuration
+        </h2>
+
+        <div class="oe_span6">
+            <h4 style="color:#333;">Google Cloud Setup</h4>
+            <ol style="font-size:14px; line-height:2;">
+                <li>Go to <a href="https://console.cloud.google.com" target="_blank">Google Cloud Console</a></li>
+                <li>Create a project and enable the <strong>Google Calendar API</strong></li>
+                <li>Create <strong>OAuth 2.0 Credentials</strong> (Web Application)</li>
+                <li>Add your Odoo URL as an Authorized Redirect URI:<br/>
+                    <code style="background:#f5f5f5; padding:2px 6px; border-radius:3px;">
+                        https://your-odoo.com/google_meet/auth/callback
+                    </code>
+                </li>
+                <li>Copy the Client ID and Client Secret into Odoo</li>
+            </ol>
+        </div>
+
+        <div class="oe_span6">
+            <h4 style="color:#333;">Odoo Setup</h4>
+            <ul style="font-size:14px; line-height:2;">
+                <li><strong>Company-level:</strong> Settings → Companies → Google Meet Configuration tab</li>
+                <li><strong>User-level:</strong> Settings → Users → Google Meet Configuration tab</li>
+                <li><strong>Preferences:</strong> User avatar → Preferences → Google Meet section</li>
+                <li>Enter Client ID + Client Secret, then click <strong>Authorize with Google</strong></li>
+                <li>Complete the Google consent screen — you are now connected</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ======================================================
+     SCREENSHOT — Company Configuration Tab
+     ====================================================== -->
+<section class="oe_container">
+    <div class="oe_row oe_spaced" style="padding:30px 0;">
+        <h2 class="oe_slogan" style="color:#1a73e8; font-size:22px; text-align:center; margin:0 0 20px;">
+            Company-Level Google Meet Configuration
+        </h2>
+        <div class="oe_span12" style="text-align:center;">
+            <img src="screen_06_company_config.png"
+                 style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.15);"
+                 alt="Company Google Meet Configuration tab"/>
+            <p style="color:#666; font-size:13px; margin-top:10px;">
+                Configure company-level credentials, authorization status, and the allowed users list
+                directly from the company form.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ======================================================
+     SCREENSHOT — User Configuration Tab
+     ====================================================== -->
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced" style="padding:30px 0;">
+        <h2 class="oe_slogan" style="color:#1a73e8; font-size:22px; text-align:center; margin:0 0 20px;">
+            User-Level Google Meet Configuration
+        </h2>
+        <div class="oe_span12" style="text-align:center;">
+            <img src="screen_07_user_config.png"
+                 style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.15);"
+                 alt="User Google Meet Configuration tab"/>
+            <p style="color:#666; font-size:13px; margin-top:10px;">
+                Each user can connect their own personal Google account from their user profile.
+                Personal credentials always take priority over company credentials.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ======================================================
+     DEVELOPER
+     ====================================================== -->
+<section class="oe_container">
+    <div class="oe_row oe_spaced" style="padding:30px 0; text-align:center;">
+        <h2 class="oe_slogan" style="color:#1a73e8; font-size:26px; margin:0 0 16px;">
+            Developer
+        </h2>
+        <p style="font-size:16px; font-weight:600; color:#333; margin:0 0 8px;">Mantu Raj</p>
+        <p style="font-size:15px; color:#555; margin:0;">
+            <strong>Email:</strong>
+            <a href="mailto:workmantu105@gmail.com">workmantu105@gmail.com</a>
+        </p>
+    </div>
+</section>
+
+</body>
+</html>

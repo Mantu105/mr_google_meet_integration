@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_google_meet" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.google.meet</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="Google Meet" string="Google Meet"
+                     name="mr_google_meet_integration"
+                     logo="/mr_google_meet_integration/static/description/icon.png">
+                    <block title="Google Meet Integration"
+                           id="google_meet_integration_settings">
+                        <setting title="Company-level Google OAuth2 credentials"
+                                 string="Google OAuth2 Credentials"
+                                 help="Set the Google API client credentials used to create Google Meet meetings on behalf of the company. Users may override these with their own credentials.">
+                            <div class="content-group mt-2">
+                                <div class="row mt16">
+                                    <label for="google_meet_client_id"
+                                           string="Client ID" class="col-lg-4 o_light_label"/>
+                                    <field name="google_meet_client_id"
+                                           placeholder="xxxxxx.apps.googleusercontent.com"/>
+                                </div>
+                                <div class="row mt16">
+                                    <label for="google_meet_client_secret"
+                                           string="Client Secret" class="col-lg-4 o_light_label"/>
+                                    <field name="google_meet_client_secret"
+                                           password="True"/>
+                                </div>
+                                <div class="row mt16">
+                                    <field name="google_meet_authorized"
+                                           invisible="1"/>
+                                    <button name="action_google_meet_authorize"
+                                            type="object"
+                                            string="Authorize with Google"
+                                            class="btn-primary"
+                                            invisible="google_meet_authorized"/>
+                                    <div invisible="not google_meet_authorized"
+                                         class="text-success o_form_label mt8">
+                                        <i class="fa fa-check-circle"/>
+                                        Company account connected
+                                    </div>
+                                    <button name="action_google_meet_disconnect"
+                                            type="object"
+                                            string="Disconnect"
+                                            class="btn-link text-danger ms-2"
+                                            invisible="not google_meet_authorized"/>
+                                </div>
+                                <div class="text-muted mt16">
+                                    Redirect URI to register in Google Cloud Console:
+                                    <code>&lt;your-odoo-url&gt;/google_meet/auth/callback</code>
+                                </div>
+                            </div>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+</odoo>

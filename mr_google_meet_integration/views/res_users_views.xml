@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Full user form (admin) -->
+    <record id="view_users_form_google_meet" model="ir.ui.view">
+        <field name="name">res.users.form.google.meet</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Google Meet Configuration" name="google_meet">
+                    <field name="google_meet_authorized" invisible="1"/>
+                    <group>
+                        <!-- Left: Active Configuration -->
+                        <group string="Active Configuration">
+                            <field name="google_meet_credential_type"
+                                   string="Currently Using"
+                                   readonly="1"/>
+                            <div colspan="2" style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+                                <div class="o_form_label" style="min-width:120px;">Personal Auth State</div>
+                                <span invisible="not google_meet_authorized"
+                                      class="badge rounded-pill text-bg-success">
+                                    Authorized
+                                </span>
+                                <span invisible="google_meet_authorized"
+                                      class="badge rounded-pill text-bg-danger">
+                                    Not Authorized
+                                </span>
+                            </div>
+                            <div colspan="2" style="margin-top:8px;">
+                                <button name="action_user_google_meet_authorize"
+                                        type="object"
+                                        string="Authorize with Google"
+                                        class="btn-primary"
+                                        invisible="google_meet_authorized"/>
+                                <button name="action_user_google_meet_disconnect"
+                                        type="object"
+                                        string="Revoke My Authorization"
+                                        class="btn-danger"
+                                        invisible="not google_meet_authorized"/>
+                            </div>
+                        </group>
+                        <!-- Right: Personal Credentials -->
+                        <group string="Personal Google Credentials (Optional)">
+                            <field name="google_meet_client_id"
+                                   string="Google Client ID"
+                                   placeholder="xxxxxx.apps.googleusercontent.com"/>
+                            <field name="google_meet_client_secret"
+                                   string="Google Client Secret"
+                                   password="True"/>
+                        </group>
+                    </group>
+                    <div class="text-muted mt-2" style="font-size:13px;">
+                        Your <strong>personal</strong> credentials take priority
+                        over the <strong>company</strong> credentials when
+                        creating Google Meet meetings.
+                    </div>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Simplified self-preferences form -->
+    <record id="view_users_form_simple_modify_google_meet" model="ir.ui.view">
+        <field name="name">res.users.preferences.form.google.meet</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form_simple_modif"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='preferences']" position="after">
+                <group string="Google Meet" name="google_meet_pref">
+                    <field name="google_meet_authorized" invisible="1"/>
+                    <field name="google_meet_credential_type"
+                           string="Currently Using"
+                           readonly="1"/>
+                    <field name="google_meet_client_id"
+                           string="Google Client ID"
+                           placeholder="xxxxxx.apps.googleusercontent.com"/>
+                    <field name="google_meet_client_secret"
+                           string="Google Client Secret"
+                           password="True"/>
+                    <button name="action_user_google_meet_authorize"
+                            type="object"
+                            string="Authorize with Google"
+                            class="btn-primary"
+                            invisible="google_meet_authorized"/>
+                    <div invisible="not google_meet_authorized" class="text-success">
+                        <i class="fa fa-check-circle"/> Connected
+                    </div>
+                    <button name="action_user_google_meet_disconnect"
+                            type="object"
+                            string="Revoke My Authorization"
+                            class="btn-link text-danger"
+                            invisible="not google_meet_authorized"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

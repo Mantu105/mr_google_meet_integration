@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c7d2fe;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#a5b4fc;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95"/>
+      <stop offset="100%" style="stop-color:#f0f4ff;stop-opacity:0.95"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Left white card -->
+  <rect x="40" y="40" width="680" height="550" rx="24" fill="url(#card)" opacity="0.97"/>
+
+  <!-- Title -->
+  <text x="80" y="140" font-family="Arial, sans-serif" font-size="56" font-weight="900"
+        fill="#1a1a2e" letter-spacing="-1">GOOGLE MEET</text>
+  <text x="80" y="205" font-family="Arial, sans-serif" font-size="56" font-weight="900"
+        fill="#1a73e8" letter-spacing="-1">INTEGRATION</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="255" font-family="Arial, sans-serif" font-size="22" fill="#555555">
+    Create and manage Google Meet
+  </text>
+  <text x="80" y="285" font-family="Arial, sans-serif" font-size="22" fill="#555555">
+    meetings from Odoo Calendar.
+  </text>
+
+  <!-- Feature icons row -->
+  <!-- Icon 1: Create Meet -->
+  <rect x="80" y="330" width="88" height="80" rx="12" fill="#e8f0fe"/>
+  <text x="124" y="365" text-anchor="middle" font-size="28">📅</text>
+  <text x="124" y="400" text-anchor="middle" font-family="Arial" font-size="10" fill="#444">Create Meet</text>
+
+  <!-- Icon 2: OAuth2 -->
+  <rect x="188" y="330" width="88" height="80" rx="12" fill="#e8f0fe"/>
+  <text x="232" y="365" text-anchor="middle" font-size="28">🔐</text>
+  <text x="232" y="400" text-anchor="middle" font-family="Arial" font-size="10" fill="#444">OAuth2</text>
+
+  <!-- Icon 3: Email -->
+  <rect x="296" y="330" width="88" height="80" rx="12" fill="#e8f0fe"/>
+  <text x="340" y="365" text-anchor="middle" font-size="28">✉️</text>
+  <text x="340" y="400" text-anchor="middle" font-family="Arial" font-size="10" fill="#444">Auto Email</text>
+
+  <!-- Icon 4: Join -->
+  <rect x="404" y="330" width="88" height="80" rx="12" fill="#e8f0fe"/>
+  <text x="448" y="365" text-anchor="middle" font-size="28">📹</text>
+  <text x="448" y="400" text-anchor="middle" font-family="Arial" font-size="10" fill="#444">Join Meet</text>
+
+  <!-- Icon 5: Chatter -->
+  <rect x="512" y="330" width="88" height="80" rx="12" fill="#e8f0fe"/>
+  <text x="556" y="365" text-anchor="middle" font-size="28">💬</text>
+  <text x="556" y="400" text-anchor="middle" font-family="Arial" font-size="10" fill="#444">Chatter</text>
+
+  <!-- Badges row -->
+  <!-- Community badge -->
+  <rect x="80" y="450" width="130" height="36" rx="18" fill="#e8f0fe" stroke="#1a73e8" stroke-width="1.5"/>
+  <text x="145" y="473" text-anchor="middle" font-family="Arial" font-size="14" fill="#1a73e8" font-weight="600">✓ Community</text>
+
+  <!-- Enterprise badge -->
+  <rect x="226" y="450" width="130" height="36" rx="18" fill="#e8f0fe" stroke="#1a73e8" stroke-width="1.5"/>
+  <text x="291" y="473" text-anchor="middle" font-family="Arial" font-size="14" fill="#1a73e8" font-weight="600">✓ Enterprise</text>
+
+  <!-- Odoo.sh badge -->
+  <rect x="372" y="450" width="120" height="36" rx="18" fill="#e8f0fe" stroke="#1a73e8" stroke-width="1.5"/>
+  <text x="432" y="473" text-anchor="middle" font-family="Arial" font-size="14" fill="#1a73e8" font-weight="600">✓ Odoo.sh</text>
+
+  <!-- Right side: Google Meet Logo area -->
+  <rect x="760" y="80" width="400" height="470" rx="24" fill="white" opacity="0.6"/>
+
+  <!-- Google Meet Logo - colored squares -->
+  <!-- Blue square -->
+  <rect x="840" y="160" width="110" height="110" rx="16" fill="#1a73e8"/>
+  <!-- Red square -->
+  <rect x="970" y="160" width="110" height="110" rx="16" fill="#ea4335"/>
+  <!-- Yellow square -->
+  <rect x="840" y="290" width="110" height="110" rx="16" fill="#fbbc04"/>
+  <!-- Green square -->
+  <rect x="970" y="290" width="110" height="110" rx="16" fill="#34a853"/>
+
+  <!-- Camera icon overlay -->
+  <rect x="866" y="186" width="60" height="58" rx="8" fill="white" opacity="0.9"/>
+  <polygon points="926,200 952,186 952,244 926,230" fill="white" opacity="0.9"/>
+  <rect x="996" y="186" width="60" height="58" rx="8" fill="white" opacity="0.9"/>
+  <polygon points="1056,200 1082,186 1082,244 1056,230" fill="white" opacity="0.9"/>
+  <rect x="866" y="316" width="60" height="58" rx="8" fill="white" opacity="0.9"/>
+  <polygon points="926,330 952,316 952,374 926,360" fill="white" opacity="0.9"/>
+  <rect x="996" y="316" width="60" height="58" rx="8" fill="white" opacity="0.9"/>
+  <polygon points="1056,330 1082,316 1082,374 1056,360" fill="white" opacity="0.9"/>
+
+  <!-- Google Meet text -->
+  <text x="960" y="450" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="30" font-weight="700" fill="#444">Google Meet</text>
+  <text x="960" y="490" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="16" fill="#777">Seamlessly Integrated with Odoo Calendar</text>
+</svg>

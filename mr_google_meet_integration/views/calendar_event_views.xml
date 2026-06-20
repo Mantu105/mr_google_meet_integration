@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_calendar_event_form_google_meet" model="ir.ui.view">
+        <field name="name">calendar.event.form.google.meet</field>
+        <field name="model">calendar.event</field>
+        <field name="inherit_id" ref="calendar.view_calendar_event_form"/>
+        <field name="arch" type="xml">
+            <!-- Action buttons in the header -->
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <field name="google_meet_has_meeting" invisible="1"/>
+                    <button name="action_open_google_meet_wizard"
+                            type="object"
+                            string="Create Google Meet"
+                            class="btn-primary"
+                            icon="fa-video-camera"
+                            invisible="google_meet_has_meeting"/>
+                    <button name="action_join_google_meet"
+                            type="object"
+                            string="Join Meet"
+                            class="btn-success"
+                            icon="fa-video-camera"
+                            invisible="not google_meet_has_meeting"/>
+                    <button name="action_delete_google_meet"
+                            type="object"
+                            string="Delete Meet"
+                            class="btn-secondary"
+                            icon="fa-trash"
+                            invisible="not google_meet_has_meeting"
+                            confirm="Delete this Google Meet meeting and notify attendees?"/>
+                </header>
+            </xpath>
+            <!-- Meet link displayed inside the sheet -->
+            <xpath expr="//sheet" position="inside">
+                <group name="google_meet_group"
+                       invisible="not google_meet_has_meeting">
+                    <field name="google_meet_url" widget="url" readonly="1"/>
+                    <field name="google_meet_code" readonly="1"/>
+                    <field name="google_meet_event_id" invisible="1"/>
+                    <field name="google_meet_credential_source" invisible="1"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
