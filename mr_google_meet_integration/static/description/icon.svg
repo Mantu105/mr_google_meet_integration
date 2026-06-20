@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <!-- Background -->
+  <circle cx="128" cy="128" r="128" fill="#1a73e8"/>
+
+  <!-- White rounded rectangle (screen) -->
+  <rect x="44" y="80" width="118" height="96" rx="14" fill="white"/>
+
+  <!-- Camera triangle (right part of Google Meet icon) -->
+  <polygon points="162,100 212,72 212,184 162,156" rx="8" fill="white"/>
+
+  <!-- Small colored dot - Google Meet style -->
+  <circle cx="88" cy="128" r="18" fill="#1a73e8"/>
+  <circle cx="88" cy="128" r="12" fill="white"/>
+</svg>

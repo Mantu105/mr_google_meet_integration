@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_company_form_google_meet" model="ir.ui.view">
+        <field name="name">res.company.form.google.meet</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Google Meet Configuration" name="google_meet_config">
+                    <field name="google_meet_authorized" invisible="1"/>
+                    <group>
+                        <!-- Row 1, Left: Status -->
+                        <group string="Status">
+                            <div colspan="2" style="padding:6px 0;">
+                                <span invisible="not google_meet_authorized"
+                                      class="badge rounded-pill text-bg-success">
+                                    Authorized
+                                </span>
+                                <span invisible="google_meet_authorized"
+                                      class="badge rounded-pill text-bg-danger">
+                                    Not Authorized
+                                </span>
+                            </div>
+                        </group>
+                        <!-- Row 1, Right: Allowed Users -->
+                        <group string="Allowed Users (to use company credentials)">
+                            <field name="google_meet_allowed_user_ids"
+                                   widget="many2many_tags"
+                                   nolabel="1"
+                                   placeholder="Leave empty to allow all users..."/>
+                        </group>
+                        <!-- Row 2, Left: Authorization + Setup Instructions -->
+                        <group string="Authorization">
+                            <div colspan="2">
+                                <button name="action_google_meet_authorize"
+                                        type="object"
+                                        string="Authorize with Google"
+                                        class="btn-primary"
+                                        invisible="google_meet_authorized"/>
+                                <button name="action_google_meet_revoke"
+                                        type="object"
+                                        string="Revoke Authorization"
+                                        class="btn-danger"
+                                        invisible="not google_meet_authorized"/>
+                                <div class="mt-3 p-3"
+                                     style="background:#fffbee;border:1px solid #f0d060;
+                                            border-radius:4px;font-size:13px;line-height:1.8;">
+                                    <strong>Setup Instructions:</strong>
+                                    <ol class="mb-0 mt-1 ps-3">
+                                        <li>Go to Google Cloud Console</li>
+                                        <li>Create a project — Enable <strong>Google Calendar API</strong></li>
+                                        <li>Create OAuth 2.0 Credentials (Web Application type)</li>
+                                        <li>Add the <strong>Redirect URI</strong> to Authorized Redirect URIs</li>
+                                        <li>Enter Client ID and Client Secret — Click <strong>Authorize</strong></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </group>
+                        <!-- Row 2, Right: Google Cloud Credentials -->
+                        <group string="Google Cloud Credentials">
+                            <field name="google_meet_client_id"
+                                   string="Google Client ID"
+                                   placeholder="xxxxxx.apps.googleusercontent.com"/>
+                            <field name="google_meet_client_secret"
+                                   string="Google Client Secret"
+                                   password="True"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
