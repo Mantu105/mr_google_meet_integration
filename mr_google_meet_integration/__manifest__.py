@@ -43,7 +43,7 @@ Key Features
         'views/res_users_views.xml',
         'views/calendar_event_views.xml',
     ],
-    'images': ['static/description/banner.png', 'static/description/icon.png'],
+    'images': ['static/description/banner.png'],
     'installable': True,
     'application': False,
     'auto_install': False,
