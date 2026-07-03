@@ -26,7 +26,7 @@ Key Features
     'website': 'https://www.linkedin.com/in/mantu105/',
     'support': 'workmantu105@gmail.com',
     'license': 'OPL-1',
-    'price': 20.0,
+    'price': 5.0,
     'currency': 'USD',
     'depends': [
         'mail',
